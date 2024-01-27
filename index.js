@@ -21,7 +21,7 @@ app.get('/api', (req, res) => {
 // get all pets from the database
 app.get('/api/v1/pets', (req, res) => {
     // send the pets array as a response
-
+    res.send(pets);
 });
 
 // get pet by owner with query string
