@@ -7,6 +7,12 @@ const app = express();
 
 const PORT = 8080;
 
+// Note: import path to send static files
+const path = require('path');
+
+// Note: sends static files
+app.use(express.static(path.join(__dirname, "public")));
+
 // GET - / - returns homepage
 app.get('/', (req, res) => {
     // serve up the public folder as static index.html file
